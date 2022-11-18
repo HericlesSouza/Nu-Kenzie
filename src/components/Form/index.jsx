@@ -15,9 +15,10 @@ export const Form = ({ listTransactions, setListTransactions }) => {
         type: optionChoose,
         value: Number(inputValue),
       }
-    setListTransactions(...listTransactions, newTransition)
+      setListTransactions([...listTransactions, newTransition])
+      console.log(listTransactions)
   };
-  
+ 
   return (
     <form onSubmit={(event) => createBodyForm(event, description, value, option)}>
       <div>
@@ -47,8 +48,8 @@ export const Form = ({ listTransactions, setListTransactions }) => {
         <div className="type-value">
           <label htmlFor="input-value">Tipo de valor</label>
           <select onChange={(event) => setOption(event.target.value)}>
-            <option value="entry">Entrada</option>
-            <option value="exit">Saída</option>
+            <option value="Entrada">Entrada</option>
+            <option value="Saída">Saída</option>
           </select>
         </div>
       </div>

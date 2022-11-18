@@ -17,8 +17,6 @@ export const List = ({ listTransactions }) => {
         <div className="div-list">
           <ul>
             <Card listTransactions={listTransactions}/>
-            <Card listTransactions={listTransactions}/>
-            <Card listTransactions={listTransactions}/>
           </ul>
         </div>
       )}
