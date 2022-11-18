@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+.main-start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  background-color: var(--color-grey-4);
+  height: 100vh;
+}
+
+.main-start>section:nth-child(1)>div {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.main-start>section:nth-child(1)>div>h1 {
+  width: 347px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: var(--font-weight-3);
+  font-size: var(--title);
+  line-height: 48px;
+  color: var(--color-white);
+}
+
+.main-start>section:nth-child(1)>div>span {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-size: var(--headline);
+  line-height: 26px;
+  color: var(--color-white);
+}
+
+.main-start>section:nth-child(1)>div>button {
+  max-width: 241px;
+  text-align: center;
+  padding: 14.5px 97px;
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  font-family: 'Inter';
+  font-weight: var(--font-weight);
+  font-size: var(--headline);
+  line-height: 19px;
+  color: var(--color-white);
+}
+
+.main-start>section:nth-child(1)>div>button:hover {
+  background-color: var(--color-primary-2);
+  border: 2px solid var(--color-primary-2);
+  color: var(--color-grey-1);
+}
+
+header {
+  background: var(--color-grey-1);
+  box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
+}
+
+.div-header {
+  padding: 32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-home {
+  margin-top: 39px;
+  display: flex;
+  gap: 60px;
+}
+
+.main-home>section:nth-child(2) {
+  width: 100%;
+  font-family: 'Nunito', sans-serif;
+}
+
+.main-home>section:nth-child(2)>h3 {
+  font-weight: var(--font-weight-2);
+  font-size: var(--title-3);
+  line-height: 30px;
+  color: var(--color-grey-4);
+}
+
+.main-home>section:nth-child(2)>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}

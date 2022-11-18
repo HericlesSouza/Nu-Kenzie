@@ -1,0 +1,20 @@
+.div-list {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito';
+}
+
+.div-list>h2 {
+    font-weight: var(--font-weight-2);
+    font-size: var(--title-2);
+    line-height: 34px;
+    color: var(--color-grey-4);
+    margin-top: 27px;
+}
+
+.div-list>ul {
+    margin-top: 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 33.5px;
+}
