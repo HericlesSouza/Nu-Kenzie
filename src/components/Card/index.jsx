@@ -2,7 +2,6 @@ import "./style.css";
 import { FaTrash } from "react-icons/fa";
 
 export const Card = ({ listTransactions }) => {
-  console.log('hey')
   return (
     <>
       {listTransactions.length === 0 ? (
