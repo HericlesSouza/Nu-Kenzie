@@ -11,21 +11,31 @@ export const Card = ({ listTransactions }) => {
           <div></div>
         </li>
       ) : (
-        <li className="item-card">
-          <div className="div-entry"></div>
-          <div>
-            <div>
-              <h3 className="title-item-card">Salário - Mês Dezembro</h3>
-            </div>
-            <div>
-              <p className="paragraph-price">R$ 6.660,00</p>
-              <div className="btn-trash">
-                <FaTrash className="icon-trash" />
+        listTransactions.map((element, index) => {
+          let type = "";
+
+          element.type === "Entrada"
+            ? (type = "div-entry")
+            : (type = "div-exit");
+
+          return (
+            <li key={index} className="item-card">
+              <div className={type}></div>
+              <div>
+                <div>
+                  <h3 className="title-item-card">{element.description}</h3>
+                </div>
+                <div>
+                  <p className="paragraph-price">R$ {element.value}</p>
+                  <div className="btn-trash">
+                    <FaTrash className="icon-trash" />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <span className="span-type-value">Entrada</span>
-        </li>
+              <span className="span-type-value">{element.type}</span>
+            </li>
+          );
+        })
       )}
     </>
   );

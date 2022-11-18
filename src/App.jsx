@@ -10,13 +10,10 @@ import { List } from "./components/List";
 import { TotalMoney } from "./components/Total_Money";
 
 function App() {
-  const [listTransactions, setListTransactions] = useState([
-    // { description: "Salário recebido", type: "entrada", value: 2500 },
-    // { description: "Conta de luz", type: "saída", value: -150 },
-  ]);
+  const [listTransactions, setListTransactions] = useState([]);
 
   const [page, setPage] = useState("pageStart");
-  console.log(listTransactions)
+   console.log(listTransactions)
   return (
     <div className="App">
       {page === "pageStart" ? (
