@@ -4,7 +4,7 @@ import "./../../index.css";
 
 export const Form = ({ listTransactions, setListTransactions }) => {
   const [description, setDescription] = useState('');
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(1)
   const [option, setOption] = useState('Entrada')
 
   const createBodyForm = (event, inputDescription, inputValue, optionChoose) => {
@@ -16,6 +16,9 @@ export const Form = ({ listTransactions, setListTransactions }) => {
         type: optionChoose,
         value: Number(inputValue),
       }
+      setDescription('')
+      setValue(1)
+      setOption('Entrada')
       setListTransactions([...listTransactions, newTransition])
   };
  
@@ -27,6 +30,7 @@ export const Form = ({ listTransactions, setListTransactions }) => {
           onChange={(event) => setDescription(event.target.value)}
           type="text"
           id="input-description"
+          value={description}
           required
           placeholder="Digite aqui sua descrição"
         />
@@ -40,6 +44,7 @@ export const Form = ({ listTransactions, setListTransactions }) => {
               onChange={(event) => setValue(event.target.value)}
               type="number"
               id="input-value"
+              value={value}
               required
             />
             <p>R$</p>

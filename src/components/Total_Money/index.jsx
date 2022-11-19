@@ -10,7 +10,7 @@ export const TotalMoney = ({ listTransactions }) => {
     <div className="div-total-value">
       <div>
         <h3>Valor total:</h3>
-        <span>R$ {value}</span>
+        <span>R$ {value},00</span>
       </div>
       <span>O valor se refere ao saldo</span>
     </div>

@@ -37,7 +37,7 @@ export const Card = ({
                   <h3 className="title-item-card">{element.description}</h3>
                 </div>
                 <div>
-                  <p className="paragraph-price">R$ {element.value}</p>
+                  <p className="paragraph-price">R$ {element.value},00</p>
                   <div className="btn-trash">
                     <FaTrash onClick={() => deleteTransaction(element.id)} className="icon-trash" />
                   </div>
