@@ -18,7 +18,6 @@ export const Form = ({ listTransactions, setListTransactions }) => {
       }
       setDescription('')
       setValue(1)
-      setOption('Entrada')
       setListTransactions([...listTransactions, newTransition])
   };
  
