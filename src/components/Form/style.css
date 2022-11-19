@@ -80,7 +80,7 @@ form>div:nth-child(2) {
 }
 
 #input-value::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+    appearance: none;
 }
 
 .type-value {
