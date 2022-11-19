@@ -121,3 +121,25 @@ form>button:hover {
     border: 2px solid var(--color-primary-2);
     color: var(--color-grey-1);
 }
+
+@media (max-width: 980px) {
+    form {
+        width: 100%;
+    }
+
+    form>div:nth-child(2) {
+        gap: 20px;
+    }
+
+    form>div:nth-child(2)>div {
+        width: 100%;
+    }
+
+    .div-input-value {
+        width: 100%;
+    }
+
+    .type-value>select{
+        width: 100%;
+    }
+}
