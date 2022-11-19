@@ -1,17 +1,28 @@
 import "./style.css";
 import { FaTrash } from "react-icons/fa";
 
-export const Card = ({ listTransactions }) => {
+export const Card = ({
+  filterActive,
+  listTransactions,
+  setListTransactions,
+}) => {
+  const deleteTransaction = (id) => {
+    const newListTransactions = listTransactions.filter(
+      (element) => element.id !== id
+    );
+    setListTransactions(newListTransactions)
+  };
+
   return (
     <>
-      {listTransactions.length === 0 ? (
+      {filterActive.length === 0 ? (
         <li className="li-no-items">
           <div></div>
           <div></div>
           <div></div>
         </li>
       ) : (
-        listTransactions.map((element, index) => {
+        filterActive.map((element, index) => {
           let type = "";
 
           element.type === "Entrada"
@@ -19,7 +30,7 @@ export const Card = ({ listTransactions }) => {
             : (type = "div-exit");
 
           return (
-            <li key={index} className="item-card">
+            <li key={index} id={element.id} className="item-card">
               <div className={type}></div>
               <div>
                 <div>
@@ -28,7 +39,7 @@ export const Card = ({ listTransactions }) => {
                 <div>
                   <p className="paragraph-price">R$ {element.value}</p>
                   <div className="btn-trash">
-                    <FaTrash className="icon-trash" />
+                    <FaTrash onClick={() => deleteTransaction(element.id)} className="icon-trash" />
                   </div>
                 </div>
               </div>

@@ -7,17 +7,6 @@ button {
     cursor: pointer;
 }
 
-.primary {
-    background-color: var(--color-primary);
-    border: 1.4px solid var(--color-primary);
-    color: var(--color-white);
-}
-
-.primary:hover {
-    background-color: var(--color-primary-2);
-    border: 1.4px solid var(--color-primary-2);
-    color: var(--color-grey-1);
-}
 
 .grey {
     background: var(--color-grey-2);
@@ -28,5 +17,17 @@ button {
 .grey:hover {
     background: var(--color-grey-4);
     border: 1.4px solid var(--color-grey-4);
+    color: var(--color-grey-1);
+}
+
+.primary {
+    background-color: var(--color-primary);
+    border: 1.4px solid var(--color-primary);
+    color: var(--color-white);
+}
+
+.primary:hover {
+    background-color: var(--color-primary-2);
+    border: 1.4px solid var(--color-primary-2);
     color: var(--color-grey-1);
 }

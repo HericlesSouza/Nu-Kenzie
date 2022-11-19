@@ -11,12 +11,12 @@ export const Form = ({ listTransactions, setListTransactions }) => {
     event.preventDefault();
     const newTransition = 
       {
+        id: listTransactions.length + 1,
         description: inputDescription,
         type: optionChoose,
         value: Number(inputValue),
       }
       setListTransactions([...listTransactions, newTransition])
-      console.log(listTransactions)
   };
  
   return (
@@ -35,7 +35,7 @@ export const Form = ({ listTransactions, setListTransactions }) => {
       <div>
         <div>
           <label htmlFor="input-value">Valor</label>
-          <div className="input-value">
+          <div className="div-input-value">
             <input
               onChange={(event) => setValue(event.target.value)}
               type="number"
