@@ -30,6 +30,7 @@ form>div:nth-child(1) {
 
 #input-description:focus {
     background-color: var(--color-white);
+    outline: 2px solid var(--color-primary);
 }
 
 form>div:nth-child(1)>p {
@@ -50,7 +51,7 @@ form>div:nth-child(2) {
     justify-content: space-between;
 }
 
-.input-value {
+.div-input-value {
     margin-top: 9px;
     display: flex;
     align-items: center;
@@ -63,8 +64,8 @@ form>div:nth-child(2) {
     border-radius: var(--border-radius-1);
 }
 
-.input-value:focus-within {
-    border: 2px solid black;
+.div-input-value:focus-within {
+    outline: 2px solid var(--color-primary);
     background-color: var(--color-white);
 }
 
@@ -97,6 +98,10 @@ form>div:nth-child(2) {
     background: var(--color-grey-1);
     border: 2px solid var(--color-grey-1);
     border-radius: var(--border-radius-1);
+}
+
+.type-value>select:focus {
+    outline: 2px solid var(--color-primary);
 }
 
 form>button {

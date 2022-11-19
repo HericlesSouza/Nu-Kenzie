@@ -1,22 +1,30 @@
 import { Card } from "../Card";
 import "./style.css";
 
-export const List = ({ listTransactions }) => {
+export const List = ({
+  filterActive,
+  listTransactions,
+  setListTransactions,
+}) => {
   return (
     <>
-      {listTransactions.length === 0 ? (
+      {filterActive.length === 0 ? (
         <div className="div-list">
           <h2>Você ainda não possui nenhum lançamento</h2>
           <ul>
-            <Card listTransactions={listTransactions}/>
-            <Card listTransactions={listTransactions}/>
-            <Card listTransactions={listTransactions}/>
+            <Card filterActive={filterActive} />
+            <Card filterActive={filterActive} />
+            <Card filterActive={filterActive} />
           </ul>
         </div>
       ) : (
         <div className="div-list">
           <ul>
-            <Card listTransactions={listTransactions}/>
+            <Card
+              filterActive={filterActive}
+              listTransactions={listTransactions}
+              setListTransactions={setListTransactions}
+            />
           </ul>
         </div>
       )}
