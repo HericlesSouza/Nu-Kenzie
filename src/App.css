@@ -107,7 +107,28 @@ button {
 }
 
 @media (max-width: 980px) {
+  .container {
+    padding: 0 15px;
+  }
+
   .main-start>img {
     display: none;
+  }
+
+  .main-home {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .main-home>section:nth-child(2)>div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-home>section:nth-child(2)>div>h3 {
+    margin-bottom: 10px;
   }
 }
