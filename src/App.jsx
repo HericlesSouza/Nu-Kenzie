@@ -23,6 +23,8 @@ function App() {
       : element.type === filterSelect;
   });
 
+  console.log(listTransactions)
+  
   return (
     <div className="App">
       {page === "pageStart" ? (
