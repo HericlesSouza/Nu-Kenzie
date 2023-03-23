@@ -6,7 +6,6 @@ export const TotalMoney = ({ listTransactions }) => {
       : previousValue - currentValue.value;
   }, 0);
   
-  console.log(value)
   return (
     <div className="div-total-value">
       <div>
