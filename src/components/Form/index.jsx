@@ -3,33 +3,43 @@ import "./style.css";
 import "./../../index.css";
 
 export const Form = ({ listTransactions, setListTransactions }) => {
-  const [description, setDescription] = useState('');
-  const [value, setValue] = useState(1)
-  const [option, setOption] = useState('Entrada')
+  const [form, setForm] = useState({
+    description: "",
+    value: 1,
+    type: "Entrada",
+  });
 
-  const createBodyForm = (event, inputDescription, inputValue, optionChoose) => {
+  const createBodyForm = (
+    event,
+  ) => {
     event.preventDefault();
-    const newTransition = 
-      {
-        id: listTransactions.length + 1,
-        description: inputDescription,
-        type: optionChoose,
-        value: Number(inputValue),
-      }
-      setDescription('')
-      setValue(1)
-      setListTransactions([...listTransactions, newTransition])
+
+    const newTransition = {
+      id: listTransactions.length + 1,
+      ...form,
+    };
+
+    setListTransactions([...listTransactions , newTransition]);
+
+    setForm({
+      description: "",
+      value: 1,
+    });
   };
- 
+
   return (
-    <form onSubmit={(event) => createBodyForm(event, description, value, option)}>
+    <form
+      onSubmit={(event) => createBodyForm(event)}
+    >
       <div>
         <label htmlFor="input-description">Descrição</label>
         <input
-          onChange={(event) => setDescription(event.target.value)}
+          onChange={(event) =>
+            setForm({ ...form, description: event.target.value })
+          }
           type="text"
           id="input-description"
-          value={description}
+          value={form.description}
           required
           placeholder="Digite aqui sua descrição"
         />
@@ -40,10 +50,12 @@ export const Form = ({ listTransactions, setListTransactions }) => {
           <label htmlFor="input-value">Valor</label>
           <div className="div-input-value">
             <input
-              onChange={(event) => setValue(event.target.value)}
+              onChange={(event) =>
+                setForm({ ...form, value: parseInt(event.target.value) })
+              }
               type="number"
               id="input-value"
-              value={value}
+              value={form.value}
               required
             />
             <p>R$</p>
@@ -51,7 +63,12 @@ export const Form = ({ listTransactions, setListTransactions }) => {
         </div>
         <div className="type-value">
           <label htmlFor="input-value">Tipo de valor</label>
-          <select onChange={(event) => setOption(event.target.value)}>
+          <select
+            onChange={(event) =>
+              setForm({ ...form, type: event.target.value })
+            }
+            value= {form.type}
+          >
             <option value="Entrada">Entrada</option>
             <option value="Saída">Saída</option>
           </select>

@@ -22,7 +22,7 @@ function App() {
       ? listTransactions
       : element.type === filterSelect;
   });
-
+  
   return (
     <div className="App">
       {page === "pageStart" ? (
